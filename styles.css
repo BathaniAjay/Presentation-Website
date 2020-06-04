@@ -1,0 +1,97 @@
+/* User gaent Stylesheet Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Css Variables  */
+:root {
+    --color-page-1:steelblue;
+    --color-page-2:tan;
+    --color-page-3:teal;
+    --color-page-4:peru;
+    --animation-speed-head:1s;
+    --animation-speed-para:1s;
+}
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    overflow: hidden;
+}
+#page-1 {
+    background-color: var(--color-page-1);
+}
+#page-2 {
+    background-color: var(--color-page-2);
+}
+#page-3 {
+    background-color: var(--color-page-3);
+}
+#page-4 {
+    background-color: var(--color-page-4);
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+    
+}
+.page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.page p {
+    font-size: 1.2rem;
+    margin-bottom: 1.4rem;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    padding: 1rem 1.4rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover,.btn-dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+.btn-dark:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animation-speed-head) ease-in forwards;
+}
+#page-1 p {
+    transform: translateX(-2200px);
+    animation: paragraph var(--animation-speed-para) ease-out 2s forwards;
+}
+#page-1 a {
+    transform: translateY(900px);
+    animation: button var(--animation-speed-head) ease-in-out 2s forwards ;
+}
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes paragraph {
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes button {
+    to {
+        transform: translateY(0);
+    }
+}
